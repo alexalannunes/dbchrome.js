@@ -1,4 +1,4 @@
-# dbchrome
+# dbchrome.js
 mini-db using localStorage and sessionStorage of Google Chrome
 
 ********************************************
@@ -8,44 +8,44 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 ###LocalStorage <code>db.ls</code>
 #### set
-<pre>
+```javascript
   db.ls.set(key, val);      key: string, val: string
-</pre>
+```
 
 #### get
-<pre>
+```javascript
   db.ls.get(key);      key: string
-</pre>
+```
 
 #### remove
-<pre>
+```javascript
   db.ls.set(key);      key: string
-</pre>
+```
 
 #### update
-<pre>
-  db.ls.set(newk, newv);      newk: string, newv: string
-</pre>
+```javascript
+  db.ls.update(newk, newv);      newk: string, newv: string
+```
 
 **********************************************
 
 ###SessionStorage <code>db.ss</code>
 #### set
-<pre>
+```javascript
   db.ss.set(key, val);      key: string, val: string
-</pre>
+```
 
 #### get
-<pre>
+```javascript
   db.ss.get(key);      key: string
-</pre>
+```
 
 #### remove
-<pre>
+```javascript
   db.ss.set(key);      key: string
-</pre>
+```
 
 #### update
-<pre>
-  db.ss.set(newk, newv);      newk: string, newv: string
-</pre>
+```javascript
+  db.ss.update(newk, newv);      newk: string, newv: string
+```
