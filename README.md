@@ -24,7 +24,7 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 #### update
 ```javascript
-  db.ls.update(newk, newv);      newk: string, newv: string
+  db.ls.update(key, newv);      key: string, newv: string
 ```
 
 **********************************************
@@ -47,5 +47,5 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 #### update
 ```javascript
-  db.ss.update(newk, newv);      newk: string, newv: string
+  db.ss.update(key, newv);      key: string, newv: string
 ```
