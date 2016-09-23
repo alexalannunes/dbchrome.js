@@ -19,7 +19,7 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 #### remove
 ```javascript
-  db.ls.set(key);      key: string
+  db.ls.remove(key);      key: string
 ```
 
 #### update
@@ -42,7 +42,7 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 #### remove
 ```javascript
-  db.ss.set(key);      key: string
+  db.ss.remove(key);      key: string
 ```
 
 #### update
