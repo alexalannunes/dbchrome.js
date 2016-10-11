@@ -43,28 +43,24 @@ var db = db || {};
 db.ls = {
 	/**
 	 * @param key {string} nome da chave
-	 * @param val {string} valor da chave
-	 */
+	 * @param val {string} valor da chave */
 	set: function(key, val) {
 		window.localStorage.setItem(key, val);
 	},
 	/**
 	 * @param key {string} nome da chave
-	 * @return {string} retorna item buscado
-	 */
+	 * @return {string} retorna item buscado */
 	get: function(key) {
 		return window.localStorage.getItem(key);
 	},
 	/**
-	 * @param key {string} nome da chave
-	 */
+	 * @param key {string} nome da chave */
 	remove: function(key) {
 		window.localStorage.removeItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave
-	 * @param newv {string} novo valor da chave
-	 */
+	 * @param newv {string} novo valor da chave */
 	update: function(key, newv) {
 		window.localStorage.setItem(key, newv);
 	}
@@ -75,28 +71,24 @@ db.ls = {
 db.ss = {
 	/**
 	 * @param key {string} nome da chave
-	 * @param val {string} valor da chave
-	 */
+	 * @param val {string} valor da chave */
 	set: function(key, val) {
 		window.sessionStorage.setItem(key, val);
 	},
 	/**
 	 * @param key {string} bome da chave
-	 * @return {string} retorna item buscado
-	 */
+	 * @return {string} retorna item buscado */
 	get: function(key) {
 		return window.sessionStorage.getItem(key);
 	},
 	/**
-	 * @param key {string} nome da chave
-	 */
+	 * @param key {string} nome da chave */
 	remove: function(key) {
 		window.sessionStorage.removeItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave
-	 * @param newv {string} novo valor da chave
-	 */
+	 * @param newv {string} novo valor da chave */
 	update: function(key, newv) {
 		window.sessionStorage.setItem(key, newv);
 	}
