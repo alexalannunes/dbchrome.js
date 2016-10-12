@@ -3,6 +3,9 @@ mini-db using localStorage and sessionStorage of Google Chrome
 
 ********************************************
 
+# Versão
+### 1.1.1
+
 # Using
 <code>db.ls</code> - <span>LocalStorage</span> | <code>db.ss</code> - <span>SessionStorage</span>
 
