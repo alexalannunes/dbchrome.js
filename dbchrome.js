@@ -1,7 +1,7 @@
 /* ******************************************************************************
  * Alex Alan Nunes
  * 17/07/2016 - 17:07
- * v1.1.1
+ * v1.2.1
  * ******************************************************************************
  * LICENSE
  * ==============================================================================
@@ -41,6 +41,12 @@ var db = db || {};
  * LocalStorage		 |
  ************************/
 db.ls = {
+	
+	/**
+	 * Limpa o localStorage caso tenha itens */
+	cls: function() {
+		localStorage.clear();
+	},
 	/**
 	 * @param key {string} nome da chave
 	 * @param val {string} valor da chave */
@@ -69,6 +75,12 @@ db.ls = {
  * SessionStorage	 |
  ************************/
 db.ss = {
+	
+	/**
+	 * Limpa o localStorage caso tenha itens */
+	cls: function() {
+		sessionStorage.clear();
+	},
 	/**
 	 * @param key {string} nome da chave
 	 * @param val {string} valor da chave */
@@ -96,6 +108,10 @@ db.ss = {
 /*
  * definindo db no objeto criado $ */
 window.$ = db;
+
+/* Limpa localStorage e o sessionStorage */
+$.ls.cls();
+$.ss.cls();
 
 /* retorna undefined */
 undefined;
