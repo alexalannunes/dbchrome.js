@@ -6,6 +6,19 @@ mini-db using localStorage and sessionStorage of Google Chrome
 # Versão
 ### 1.3.1
 
+# Primeiro de Tudo
+### deve-se usar a função <code>isChrome()</code> para verificar se o browser atual é o Google Chrome
+```javascript
+if($.isChrome()) {
+	/* Limpa localStorage e o sessionStorage */
+	$.ls.cls();
+	$.ss.cls();
+}
+else {
+	throw "Voce deve usar o Google Chrome";
+}
+```
+
 # Using
 <code>db.ls</code> - <span>LocalStorage</span> | <code>db.ss</code> - <span>SessionStorage</span>
 
