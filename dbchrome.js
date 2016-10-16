@@ -1,7 +1,7 @@
 /* ******************************************************************************
  * Alex Alan Nunes
  * 17/07/2016 - 17:07
- * v1.2.1
+ * v1.3.1
  * ******************************************************************************
  * LICENSE
  * ==============================================================================
@@ -36,12 +36,22 @@
  * ini object
  */
 var db = db || {};
-
+db = {
+	/**
+	 * verifica se o browser é o Google Chrome */
+	 isChrome: function() {
+	 	if(navigator.userAgent.indexOf("Chrome") === -1) {
+	 		return false;
+	 	}
+	 	else {
+	 		return true;
+	 	}
+	 }
+}
 /*************************
  * LocalStorage		 |
  ************************/
 db.ls = {
-	
 	/**
 	 * Limpa o localStorage caso tenha itens */
 	cls: function() {
@@ -109,9 +119,14 @@ db.ss = {
  * definindo db no objeto criado $ */
 window.$ = db;
 
-/* Limpa localStorage e o sessionStorage */
-$.ls.cls();
-$.ss.cls();
+if($.isChrome()) {
+	/* Limpa localStorage e o sessionStorage */
+	$.ls.cls();
+	$.ss.cls();
+}
+else {
+	throw "Voce deve usar o Google Chrome";
+}
 
 /* retorna undefined */
 undefined;
