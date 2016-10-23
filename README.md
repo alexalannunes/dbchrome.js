@@ -21,6 +21,12 @@ else {
 }
 ```
 
+# Opcional
+#### Você pode remover isso caso queira
+```javascript
+	window.$ = db;
+```
+
 # Uso
 <code>db.ls</code> - <span>LocalStorage</span> | <code>db.ss</code> - <span>SessionStorage</span>
 
