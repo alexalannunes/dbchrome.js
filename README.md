@@ -15,6 +15,8 @@ if($.isChrome()) {
 	$.ss.cls();
 }
 else {
+	/* redireciona para a pagina de download do Google Chrome */
+	top.location.href = "https://www.google.com.br/chrome/browser/desktop/";
 	throw "Voce deve usar o Google Chrome";
 }
 ```
