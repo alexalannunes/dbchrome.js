@@ -4,7 +4,7 @@ mini-db using localStorage and sessionStorage of Google Chrome
 ********************************************
 
 # Versão
-### 1.3.2
+### 1.5.2
 
 # Primeiro de Tudo
 ### A função <code>isChrome()</code> é iniciada automaticamente para verificar se o browser atual é o Google Chrome
