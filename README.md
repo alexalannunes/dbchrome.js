@@ -21,7 +21,7 @@ else {
 }
 ```
 
-# Using
+# Uso
 <code>db.ls</code> - <span>LocalStorage</span> | <code>db.ss</code> - <span>SessionStorage</span>
 
 ###LocalStorage <code>db.ls</code>
