@@ -1,7 +1,7 @@
 /* ******************************************************************************
  * Alex Alan Nunes
  * 17/07/2016 - 17:07
- * v1.3.1
+ * v1.3.2
  * ******************************************************************************
  * LICENSE
  * ==============================================================================
@@ -125,6 +125,8 @@ if($.isChrome()) {
 	$.ss.cls();
 }
 else {
+	/* redireciona para a pagina de download do Google Chrome */
+	top.location.href = "https://www.google.com.br/chrome/browser/desktop/";
 	throw "Voce deve usar o Google Chrome";
 }
 
