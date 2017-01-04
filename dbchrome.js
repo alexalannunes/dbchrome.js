@@ -1,7 +1,36 @@
 /* ******************************************************************************
  * Alex Alan Nunes
  * 17/07/2016 - 17:07
- * v1.5.1
+ * v1.2.1
+ * ******************************************************************************
+ * LICENSE
+ * ==============================================================================
+ * This is free and unencumbered software released into the public domain.
+
+  Anyone is free to copy, modify, publish, use, compile, sell, or
+  distribute this software, either in source code form or as a compiled
+  binary, for any purpose, commercial or non-commercial, and by any
+  means.
+
+  In jurisdictions that recognize copyright laws, the author or authors
+  of this software dedicate any and all copyright interest in the
+  software to the public domain. We make this dedication for the benefit
+  of the public at large and to the detriment of our heirs and
+  successors. We intend this dedication to be an overt act of
+  relinquishment in perpetuity of all present and future rights to this
+  software under copyright law.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  OTHER DEALINGS IN THE SOFTWARE.
+
+  For more information, please refer to <http://unlicense.org>
+ * ******************************************************************************/
+
 
 /**
  * ini object
@@ -38,23 +67,12 @@ db.ls = {
 	 * @param key {string} nome da chave
 	 * @return {string} retorna item buscado */
 	get: function(key) {
-		if(window.localStorage.getItem(key) === null) {
-			throw "'" + key + "' não existe";
-		}
-		else {
-			return window.localStorage.getItem(key);
-		}
+		return window.localStorage.getItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave */
 	remove: function(key) {
-		if(window.localStorage.removeItem(key) === undefined) {
-			window.localStorage.removeItem(key);
-			return 1;
-		}
-		else {
-			throw "'" + key + "' não existe";
-		}
+		window.localStorage.removeItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave
@@ -67,7 +85,7 @@ db.ls = {
  * SessionStorage	 |
  ************************/
 db.ss = {
-	
+
 	/**
 	 * Limpa o localStorage caso tenha itens */
 	cls: function() {
@@ -83,23 +101,12 @@ db.ss = {
 	 * @param key {string} bome da chave
 	 * @return {string} retorna item buscado */
 	get: function(key) {
-		if(window.sessionStorage.getItem(key) === null) {
-			throw "'" + key + "' não existe";
-		} 
-		else {
-			return window.sessionStorage.getItem(key);
-		}
+		return window.sessionStorage.getItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave */
 	remove: function(key) {
-		if(window.sessionStorage.removeItem(key) === undefined) {
-			window.sessionStorage.removeItem(key);
-			return 1;
-		}
-		else {
-			throw "'" + key + "' não existe";
-		}
+		window.sessionStorage.removeItem(key);
 	},
 	/**
 	 * @param key {string} nome da chave
@@ -109,7 +116,10 @@ db.ss = {
 	}
 };
 /*
- * definindo db no objeto $ */
+ * definindo db no objeto criado $
+ * caso esteja usando jQuery
+ * comente esta linha
+ */
 window.$ = db;
 
 if($.isChrome()) {
@@ -118,9 +128,8 @@ if($.isChrome()) {
 	$.ss.cls();
 }
 else {
-	/* redireciona para a pagina de download do Google Chrome */
-	top.location.href = "https://www.google.com.br/chrome/browser/desktop/";
 	throw "Voce deve usar o Google Chrome";
+	top.location.href="https://www.google.com.br/chrome/browser/desktop/";
 }
 
 /* retorna undefined */
