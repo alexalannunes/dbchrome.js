@@ -30,7 +30,7 @@ else {
 # Uso
 <code>db.ls</code> - <span>LocalStorage</span> | <code>db.ss</code> - <span>SessionStorage</span>
 
-###LocalStorage <code>db.ls</code>
+### LocalStorage <code>db.ls</code>
 #### set
 ```javascript
   db.ls.set(key, val);      key: string, val: string
