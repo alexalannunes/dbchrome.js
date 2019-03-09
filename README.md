@@ -53,7 +53,7 @@ else {
 
 **********************************************
 
-###SessionStorage <code>db.ss</code>
+### SessionStorage <code>db.ss</code>
 #### set
 ```javascript
   db.ss.set(key, val);      key: string, val: string
