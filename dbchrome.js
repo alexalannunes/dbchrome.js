@@ -3,12 +3,12 @@ const ls = {};
 const ss = {};
 
 
-ls.set = ls_get;
+ls.set = ls_set;
 ls.get = ls_get;
 ls.update = ls_update;
 ls.remove = ls_remove;
 
-ss.set = ss_get;
+ss.set = ss_set;
 ss.get = ss_get;
 ss.update = ss_update;
 ss.remove = ss_remove;
@@ -16,7 +16,7 @@ ss.remove = ss_remove;
 
 function ls_set(key, value) {
 
-  value = (typeof value === 'object') ? JSON.parse(value) : value;
+  value = (typeof value === 'object') ? JSON.stringify(value) : value;
   l.setItem(key, value);
 
 }
@@ -25,7 +25,8 @@ function ls_get(key) {
 
   if (l[key]) {
 
-    return (typeof key === 'string') ? l[key] : console.error('{key} isn\'t string');
+    return (typeof key === 'string') ? ((l[key].indexOf('{') !== -1) ? JSON.parse(l[key]) : l[key]) : console.error('{key} isn\'t string');
+
   }
   else {
 
@@ -37,7 +38,7 @@ function ls_get(key) {
 function ls_update(key, value) {
   if (l[key]) {
 
-    set(key, value);
+    ls_set(key, value);
 
   }
   else {
@@ -65,7 +66,7 @@ function ls_remove(key) {
 
 function ss_set(key, value) {
 
-  value = (typeof value === 'object') ? JSON.parse(value) : value;
+  value = (typeof value === 'object') ? JSON.stringify(value) : value;
   s.setItem(key, value);
 
 }
@@ -74,7 +75,8 @@ function ss_get(key) {
 
   if (s[key]) {
 
-    return (typeof key === 'string') ? s[key] : console.error('{key} isn\'t string');
+    return (typeof key === 'string') ? ((s[key].indexOf('{') !== -1) ? JSON.parse(s[key]) : s[key]) : console.error('{key} isn\'t string');
+
   }
   else {
 
@@ -86,7 +88,7 @@ function ss_get(key) {
 function ss_update(key, value) {
   if (s[key]) {
 
-    set(key, value);
+    ss_set(key, value);
 
   }
   else {
